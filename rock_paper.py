@@ -16,7 +16,7 @@ while True:
         elif(p2 == 'scissor'):
             print('Player2 wins!!')
         elif(p2 == 'rock'):
-            print('Player1!!')
+            print('Player1 Wins!!')
 
     elif(p1 == 'scissor'):
         if(p2 == 'paper'):
