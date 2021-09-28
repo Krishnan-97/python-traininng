@@ -7,7 +7,7 @@ if(n1 >= n2):
 else:
     gr = n2
 
-if(n3 > gr):
+if(n3 >= gr):
     print('Biggest num is',n3)
 else:
     print('Biggest num is',gr)
