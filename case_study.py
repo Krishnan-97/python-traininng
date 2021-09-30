@@ -1,3 +1,6 @@
+import case_study_Exception
+from case_study_Exception import *
+
 class Employee:
     def __init__(self,emp_id,emp_name,join_date,mgr_id):
         self.emp_id = emp_id
@@ -21,10 +24,17 @@ class Timesheet:
         self.mgr_cmmt = mgr_cmmt
 
     def display(self):
-        print("Timesheet Id:",self.ts_id,"Timesheet Activity:",self.act)
+        if(self.hrs < 40):
+            raise case_study_Exception.LessThan40Error()
+        else:
+            print("Timesheet Id:", self.ts_id, "Timesheet Activity:", self.act)
 
 e = Employee(155,"Krishnan","1/1/2021",80)
 e.display()
 
 t = Timesheet(1,55,12,"Testing","23/05/2020",48,"completed","accurate results")
 t.display()
+
+t = Timesheet(3,38,8,"UI Creation","12/03/2020",24," not completed","not inspected")
+t.display()
+
