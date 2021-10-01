@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form</title>
+</head>
+<style type="text/css">
+	body{
+		background-color: #DCDCDC;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	.main{
+		margin-top: 80px;
+		margin-bottom: 80px;
+		margin-left: 400px;
+		margin-right: 400px;
+		border-radius: 5px;
+		background-color: white;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		padding: 50px;
+	}
+	[type="date"] {
+	  background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+	}
+	[type="date"]::-webkit-inner-spin-button {
+	  display: none;
+	}
+	[type="date"]::-webkit-calendar-picker-indicator {
+	  opacity: 0;
+	}
+	input[type=text], select {
+	  width: 100%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	}
+	input[type=number], select {
+	  width: 100%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  box-sizing: border-box;
+	}
+
+	input[type=submit] {
+	  width: 100%;
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 14px 20px;
+	  margin: 8px 0;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	}
+
+	input[type=submit]:hover {
+	  background-color: #45a049;
+	}
+	label.dtpk {
+	  display: block;
+	}
+	input.dtpk {
+	  border: 1px solid #c4c4c4;
+	  border-radius: 5px;
+	  background-color: #fff;
+	  padding: 3px 5px;
+	  box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);
+	  width: 190px;
+	}
+	.grid-container {
+	  display: grid;
+	  grid-template-columns: auto auto;
+	}
+	.grid-item {
+	  text-align: center;
+	}
+
+</style>
+<body>
+	<div class="main">
+		<form action="#">
+		    <label for="empid">Employee Id</label>
+		    <input type="number" id="empid" placeholder="Your employee id.." required="Id is required">
+
+		    <label for="empname">Last Name</label>
+		    <input type="text" id="empname" placeholder="Your name..">
+
+		    <label for="cnum">Contact Number</label>
+		    <input type="number" id="cnum" placeholder="Your contact no..">
+
+		    <label for="email">Email Id</label>
+		    <input type="text" id="email" placeholder="Your email id..">
+
+		    <label for="tech">Technology</label>
+		    <select id="tech" name="tech">
+		      <option value="python">Python</option>
+		      <option value="php">PhP</option>
+		      <option value="react">React</option>
+		    </select>
+
+		    <label for="course">Course</label>
+		    <select id="course" name="course">
+		      <option value="btech">B.Tech</option>
+		      <option value="mtech">M.Tech</option>
+		      <option value="mca">MCA</option>
+		    </select>
+		    <div class="grid-container">
+			  <div class="grid-item">
+			  	<label class="dtpk" for="dateofbirth">Start date</label>
+				<input class="dtpk" type="date" name="dateofbirth" id="dateofbirth">
+			  </div>
+			  <div class="grid-item">
+			  	<label class="dtpk" for="dateofbirth1">End date</label>
+				<input class="dtpk" type="date" name="dateofbirth1" id="dateofbirth1">
+			  </div>  
+			</div>
+
+			<p>Other Facilities</p>
+
+			<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+			<label for="vehicle1"> Virtual Lab</label><br>
+			<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+			<label for="vehicle2"> Online Quiz</label><br>
+			<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+			<label for="vehicle3"> Online Instructor</label><br><br>
+		  
+		    <input type="submit" value="Submit">
+		  </form>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Utopia</title>
+	<style type="text/css">
+		body{
+			background-image: linear-gradient(to right, #F0FFFF , #FFEBCD);
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+		}
+		.intr{
+			margin-bottom: 30px;
+		}
+		#navbar {
+		  overflow: hidden;
+		  background-color: #333;
+		  border-radius: 3px;
+		}
+
+		#navbar a {
+		  float: left;
+		  display: block;
+		  color: #228B22;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		#navbar a:hover {
+		  background-color: #ddd;
+		  color: black;
+		}
+
+		#navbar a.active {
+		  background-color: #04AA6D;
+		  color: white;
+		}
+
+		h1.head1{
+			font-size: 40px;
+			color: #6495ED;
+			font-family: Papyrus, fantasy;
+		}
+		hr.new1 {
+		  border-top: 1px solid #6495ED;
+		}
+		p.par1{
+			color: #8A2BE2;
+		}
+		#customers {
+		  font-family: Arial, Helvetica, sans-serif;
+		  border-collapse: collapse;
+		  width: 100%;
+		}
+
+		#customers td, #customers th {
+		  border: 1px solid #ddd;
+		  padding: 8px;
+		}
+
+		#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+		#customers tr:hover {background-color: #ddd;}
+
+		#customers th {
+		  padding-top: 12px;
+		  padding-bottom: 12px;
+		  text-align: center;
+		  background-color: #04AA6D;
+		  color: white;
+		}
+		
+		.listdiv{
+			text-align: left;
+			margin-left: 100px;
+			font-size: 20px;
+		}
+		
+		.sticky {
+		  position: fixed;
+		  top: 0;
+		  width: 100%;
+		}
+
+		.sticky + .content {
+		  padding-top: 60px;
+		}
+	</style>
+</head>
+<body>
+	<a name="intro" class="intr"></a>
+	<div id="navbar">
+		<a href="#intro"><b>Intro</b></a>
+	  	<a href="#chap1"><b>Lists</b></a>
+	  	<a href="#chap2"><b>Tables</b></a>
+	  	<a href="form.html" target="_blank"><b>Form</b></a>
+	 	<a href="https://www.google.co.in/" target="_blank"><b>Google</b></a>
+	</div>
+	<h1 class="head1">Utopia</h1>
+	<hr class="new1">
+	<p><h1>This is the introduction of my web page.</h1>
+		<br>
+		<h2>This is the text of my web page.</h2>
+		<br>
+		<h3>This is the text of my web page.</h3>
+		<br>
+		<h4>This is the text of my web page.</h4>
+		<br>
+		<h5>This is the text of my web page.</h5>
+		<br>
+		<h6>This is the text of my web page.</h6>
+		<br>
+		
+		<iframe width="600" height="315"
+		src="https://www.youtube.com/embed/Hy_Xm5g_koo?autoplay=0&mute=1">
+		</iframe>
+		
+		<a name="chap1" >
+		<br>
+		</a>
+		<h1>Lists</h1>
+		<div class="listdiv">
+			
+			<br>
+			<h2>Unordered List</h2>
+			<ul>
+				<li>Something</li>
+				<li>Something</li>
+				<li>Something</li>
+				<li>Something</li>
+				<li>Something</li>
+				<li>Something</li>
+			</ul>
+			<h2>Ordered List</h2>
+			<ol>
+				<li>Something</li>
+				<li>Something</li>
+				<li>Something</li>
+				<li>Something</li>
+				<li>Something</li>
+				<li>Something</li>
+			</ol>
+			<h2>Description List</h2>
+			<dl>
+			  <dt>Coffee</dt>
+			  <dd>Black hot drink</dd>
+			  <dt>Milk</dt>
+			  <dd>White cold drink</dd>
+			  <dt>Milk</dt>
+			  <dd>White cold drink</dd>
+			  <dt>Milk</dt>
+			  <dd>White cold drink</dd>
+			  <dt>Milk</dt>
+			  <a name="chap2"><dd>White cold drink</dd></a>
+			</dl>
+		</div>
+		<h2>Tables</h2>
+		<br><br>
+		<table id="customers">
+		  <tr>
+		    <th>First Name</th>
+		    <th>Last Name</th>
+		    <th>Date of birth</th>
+		    <th>Phone no</th>
+		  </tr>
+		  <tr>
+		    <td>Alfreds Futterkiste</td>
+		    <td>Maria Anders</td>
+		    <td>01/03/1994</td>
+		    <td>9080367781</td>
+		  </tr>
+		  <tr>
+		    <td>Berglunds snabbköp</td>
+		    <td>Christina Berglund</td>
+		    <td>01/03/1994</td>
+		    <td>9080367781</td>
+		  </tr>
+		  <tr>
+		    <td>Centro comercial Moctezuma</td>
+		    <td>Francisco Chang</td>
+		    <td>01/03/1994</td>
+		    <td>9080367781</td>
+		  </tr>
+		  <tr>
+		    <td>Ernst Handel</td>
+		    <td>Roland Mendel</td>
+		    <td>01/03/1994</td>
+		    <td>9080367781</td>
+		  </tr>
+		  <tr>
+		    <td>Island Trading</td>
+		    <td>Helen Bennett</td>
+		    <td>01/03/1994</td>
+		    <td>9080367781</td>
+		  </tr>
+		  
+		</table>
+		<br><br>
+
+		<table id="customers">
+		  <tr>
+		    <th>Fruit Name</th>
+		    <th>Fruit Image</th>
+		    <th>Fruit Cost</th>
+		    
+		  </tr>
+		  <tr>
+		    <td>Apple</td>
+		    <td><img src="img/apple.png" alt="Trulli" width="50" height="50"></td>
+		    <td>&#8377; 100</td>
+		    
+		  </tr>
+		  <tr>
+		    <td>Orange</td>
+		    <td><img src="img/orange.jpg" alt="Trulli" width="50" height="50"></td>
+		    <td>&#8377; 80</td>
+		    
+		  </tr>
+		  <tr>
+		    <td>Bananna</td>
+		    <td><img src="img/bananna.jpg" alt="Trulli" width="50" height="50"></td>
+		    <td>&#8377; 70</td>
+		   
+		  </tr>
+		  
+		  
+		</table>
+
+		<br><br>
+	<a href="https://www.google.co.in/" target="_blank"><img src="img/son.jpg" alt="Trulli" width="500" height="333"></a>
+	<hr>
+	<p class="par1">
+		This page was written by <i>Krishnan,krishnandx@gmail.com</i>
+		<br>
+		<b>October 1,2021</b>
+	</p>
+	<script>
+	window.onscroll = function() {myFunction()};
+
+	var navbar = document.getElementById("navbar");
+	var sticky = navbar.offsetTop;
+
+	function myFunction() {
+	  if (window.pageYOffset >= sticky) {
+	    navbar.classList.add("sticky")
+	  } else {
+	    navbar.classList.remove("sticky");
+	  }
+	}
+	</script>
+</body>
+</html>
