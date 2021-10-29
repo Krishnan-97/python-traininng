@@ -13,3 +13,26 @@
 8.chgrp user3 employeelist
 9.chown user5 employeelist
 10.wc -w employeelist
+11.cat > File1
+12.cat >> File1
+13.cat > File2
+14.cat File1
+   cat File2
+15.cat File1 File2
+16.cat File1 File2 > File3
+17.cat File5 2> errorlog
+18.head -25 test | tail +10
+19.head -10 test | tail -1
+20.find . -mtime -1
+21.wc -l < File1
+22.grep [a] File1
+23.grep "The*" File1
+
+VI editor
+O type heading
+dd to delete line
+u to undo
+/bc
+dw
+:2s/c/C/g
+:1,$s/ /\t/g
