@@ -27,6 +27,14 @@
 21.wc -l < File1
 22.grep [a] File1
 23.grep "The*" File1
+24.grep "\.$"
+25.grep "^.[abc]" File1
+26.grep -E 'def|deef|deeef' File1
+27.grep -v "^[0-9]" File1
+28.grep -n "^$" File1
+29.cat /etc/passwd | grep "user[1-10]"
+30.ls -d */
+
 
 VI editor
 O type heading
