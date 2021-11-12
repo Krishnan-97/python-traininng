@@ -1,0 +1,95 @@
+
+CREATE FUNCTION udfProductInYear2 (
+    @model_year int,
+	@model_year1 INT
+
+)
+RETURNS TABLE
+AS
+RETURN
+    SELECT 
+        order_id,
+        customer_id,
+        order_status,
+		store_id,
+		staff_id,
+		order_date
+    FROM
+        sales.orders
+    WHERE
+        cast(year(order_date) as int) between @model_year and @model_year1;
+
+
+SELECT 
+    * 
+FROM 
+    udfProductInYear2(2016,2018);
+
+
+
+CREATE TRIGGER production.trg_product_audit
+ON production.products
+AFTER INSERT, DELETE
+AS
+BEGIN
+    SET NOCOUNT ON;
+    INSERT INTO production.product_audits(
+        product_id, 
+        product_name,
+        brand_id,
+        category_id,
+        model_year,
+        list_price, 
+        updated_at, 
+        operation
+    )
+    SELECT
+        i.product_id,
+        product_name,
+        brand_id,
+        category_id,
+        model_year,
+        i.list_price,
+        GETDATE(),
+        'INS'
+    FROM
+        inserted i
+    UNION ALL
+    SELECT
+        d.product_id,
+        product_name,
+        brand_id,
+        category_id,
+        model_year,
+        d.list_price,
+        GETDATE(),
+        'DEL'
+    FROM
+        deleted d;
+END
+
+INSERT INTO production.products(
+    product_name, 
+    brand_id, 
+    category_id, 
+    model_year, 
+    list_price
+)
+VALUES (
+    'Test product',
+    1,
+    1,
+    2018,
+    599
+);
+
+delete from production.products
+where brand_id = 1
+
+
+SELECT 
+    * 
+FROM 
+    production.product_audits;
+
+

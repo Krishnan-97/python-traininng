@@ -44,3 +44,37 @@ u to undo
 dw
 :2s/c/C/g
 :1,$s/ /\t/g
+
+read -p "N1:" n1
+  2 read -p "N2:" n2
+  3 read -p "N3:" n3
+  4 if test $n1 -gt $n2
+  5 then
+  6         if test $n1 -gt $n3
+  7         then
+  8                 echo $n1
+  9                 if test $n3 -gt $n2
+ 10                 then
+ 11                         echo $n3
+ 12                         echo $n2
+ 13                 else
+ 14                         echo $n2
+ 15                         echo $n3
+ 16                 fi
+ 17         else
+ 18                 echo $n3
+ 19                 if test $n1 -gt $n2
+ 20                 then
+ 21                         echo $n1
+ 22                         echo $n2
+ 23                 else
+ 24                         echo $n2
+ 25                         echo $n1
+ 26                 fi
+ 27         fi
+ 28 else
+ 29         if test $n2 -gt $n3
+ 30         then
+ 31                 echo $n2
+ 32                 if test $n3 -gt $n1
+"mm" 51L, 558C                              
